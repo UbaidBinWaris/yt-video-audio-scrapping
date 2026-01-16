@@ -1,0 +1,31 @@
+{
+  "name": "yt-video-audio-scrapping",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:backend": "cd backend && .\\venv\\Scripts\\python app.py",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:backend\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "backend:install": "cd backend && python -m venv venv && .\\venv\\Scripts\\pip install -r requirements.txt",
+    "backend:start": "cd backend && .\\venv\\Scripts\\python app.py"
+  },
+  "dependencies": {
+    "next": "16.1.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
