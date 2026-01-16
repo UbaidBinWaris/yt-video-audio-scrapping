@@ -119,6 +119,7 @@ def download_video():
             'no_warnings': False,
             'ignoreerrors': False,
             'merge_output_format': 'mp4',  # Merge to MP4 if needed
+            'nocheckcertificate': True,  # Skip certificate check
         }
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -171,6 +172,8 @@ def download_audio():
             }],
             'prefer_ffmpeg': True,
             'ffmpeg_location': ffmpeg_path,  # Use discovered path
+            'cookiefile': None,  # No cookies needed
+            'nocheckcertificate': True,  # Skip certificate check
         }
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
